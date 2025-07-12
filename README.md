@@ -169,7 +169,7 @@ class KoreanHistoryApp {
 **Mr.Kim** - 웹개발 공부 중
 
 - 이메일: victory.jun01@gmail.com
-- 포트폴리오: [viewfitweb1.netlify.app](https://viewfitweb1.netlify.app)
+- 포트폴리오: [viewfitweb1.netlify.app](whimsical-douhua-01dfc4.netlify.app)
 
 ## 🔄 업데이트 로그
 
