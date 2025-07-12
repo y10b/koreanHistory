@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="한국사 키워드별 문제풀이 - 한능검 시험 대비 학습">
+    <meta name="keywords" content="한능검, 한국사, 키워드, 문제풀이, 퀴즈">
+    <meta name="author" content="Mr.Kim">
+    <meta name="robots" content="index, follow">
+
+    <title>한국사 키워드 문제풀이 - 한능검 스토리텔링 프로젝트</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../history/img/logo.ico" type="image/x-icon">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Critical CSS -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .quiz-title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .quiz-content {
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quiz-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .quiz-button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* Accessibility improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Loading state */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .quiz-container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .quiz-title {
+                font-size: 2em;
+            }
+
+            .quiz-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .quiz-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+
+    <!-- Main CSS -->
+    <link type='text/css' rel='stylesheet' href='style.css' />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "한국사 키워드 문제풀이",
+        "description": "한국사 능력검정시험을 위한 키워드별 문제풀이 퀴즈",
+        "url": "https://your-domain.com/src/keyword/keyword.html",
+        "author": {
+            "@type": "Person",
+            "name": "Mr.Kim"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "한능검 스토리텔링 프로젝트"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <main id='container' class="quiz-container" role="main">
+        <header>
+            <h1 class="quiz-title" id="quiz-title">한국사 키워드 문제풀이</h1>
+        </header>
+
+        <section class="quiz-content" aria-labelledby="quiz-title">
+            <div id='quiz' class="loading" role="region" aria-label="퀴즈 내용">
+                <div class="spinner" aria-label="로딩 중"></div>
+            </div>
+        </section>
+
+        <nav class="quiz-buttons" role="navigation" aria-label="퀴즈 네비게이션">
+            <button class='quiz-button btn-secondary' id='prev' aria-label="이전 문제">
+                <span class="sr-only">이전 문제로 이동</span>
+                이전
+            </button>
+            <button class='quiz-button btn-primary' id='next' aria-label="다음 문제">
+                <span class="sr-only">다음 문제로 이동</span>
+                다음
+            </button>
+            <button class='quiz-button btn-success' id='start' aria-label="퀴즈 다시 시작">
+                <span class="sr-only">퀴즈를 처음부터 다시 시작</span>
+                시작
+            </button>
+        </nav>
+
+        <!-- Progress indicator -->
+        <div class="progress-container" aria-label="진행 상황" style="margin-top: 20px; text-align: center;">
+            <span id="progress-text" class="sr-only">진행 상황</span>
+            <div id="progress-bar"
+                style="width: 100%; height: 4px; background: #e9ecef; border-radius: 2px; overflow: hidden;">
+                <div id="progress-fill"
+                    style="width: 0%; height: 100%; background: #667eea; transition: width 0.3s ease;"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GF2zshcnTz"
+        crossorigin="anonymous"></script>
+    <script src="jsquiz.js"></script>
+
+    <!-- Error handling -->
+    <script>
+        // Global error handler
+        window.addEventListener('error', function (e) {
+            console.error('JavaScript 오류 발생:', e.error);
+            const quizElement = document.getElementById('quiz');
+            if (quizElement) {
+                quizElement.innerHTML = '<p style="text-align: center; color: #dc3545;">문제를 불러오는 중 오류가 발생했습니다. 페이지를 새로고침해주세요.</p>';
+            }
+        });
+
+        // jQuery ready fallback
+        if (typeof jQuery === 'undefined') {
+            console.error('jQuery가 로드되지 않았습니다.');
+            document.getElementById('quiz').innerHTML = '<p style="text-align: center; color: #dc3545;">필수 라이브러리가 로드되지 않았습니다. 인터넷 연결을 확인해주세요.</p>';
+        }
+    </script>
+</body>
+
+</html>

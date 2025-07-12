@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="한국사 능력검정시험을 위한 스토리텔링 기반 학습 플랫폼 - 역사를 쉽고 재미있게 배우세요">
+  <meta name="keywords" content="한능검, 한국사, 역사, 스토리텔링, 학습, 교육">
+  <meta name="author" content="Mr.Kim">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com/">
+  <meta property="og:title" content="우리 역사 바로 알기 - 스토리텔링 한국사 학습">
+  <meta property="og:description" content="한국사 능력검정시험을 위한 스토리텔링 기반 학습 플랫폼">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://your-domain.com/">
+  <meta property="twitter:title" content="우리 역사 바로 알기 - 스토리텔링 한국사 학습">
+  <meta property="twitter:description" content="한국사 능력검정시험을 위한 스토리텔링 기반 학습 플랫폼">
+  <meta property="twitter:image" content="assets/images/og-image.jpg">
+
+  <title>우리 역사 바로 알기 - 스토리텔링 한국사 학습 플랫폼</title>
+  <link rel="shortcut icon" href="assets/images/logo.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts with display=swap for better performance -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&family=Crimson+Text:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Critical CSS -->
+  <style>
+    /* Critical CSS for above-the-fold content */
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .preloader.hidden {
+      display: none;
+    }
+
+    .loading-animation {
+      width: 50px;
+      height: 50px;
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- Template CSS Style -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="assets/css/animate.css">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+  <!-- et line font -->
+  <link rel="stylesheet" href="assets/css/et-line-font/style.css">
+
+  <!-- BXslider CSS -->
+  <link rel="stylesheet" href="assets/css/bxslider/jquery.bxslider.css">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="assets/css/owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/owl-carousel/owl.theme.css">
+  <link rel="stylesheet" href="assets/css/owl-carousel/owl.transitions.css">
+
+  <!-- Magnific-Popup CSS -->
+  <link rel="stylesheet" href="assets/css/magnific-popup/magnific-popup.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "우리 역사 바로 알기",
+    "description": "한국사 능력검정시험을 위한 스토리텔링 기반 학습 플랫폼",
+    "url": "https://your-domain.com",
+    "author": {
+      "@type": "Person",
+      "name": "Mr.Kim"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "한능검 스토리텔링 프로젝트"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="loading-animation" aria-label="페이지 로딩 중"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header" role="banner">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" aria-label="메인 네비게이션">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-nav"
+            aria-expanded="false" aria-controls="navigation-nav">
+            <span class="sr-only">네비게이션 토글</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" aria-label="홈으로 이동">
+            <img src="assets/images/android-icon-48x48.png" alt="로고" width="48" height="48">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navigation-nav">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="src/history/index.html" aria-label="역사 흐름 바로알기 페이지로 이동">역사 흐름 바로알기</a></li>
+            <li><a href="#contact-section" aria-label="문의 섹션으로 이동">문의</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="wrapper" role="main">
+    <!-- Hero Section -->
+    <section aria-labelledby="hero-title">
+      <div id="hero-section" class="landing-hero" data-stellar-background-ratio="0">
+        <div class="hero-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="hero-text">
+                  <div class="herolider">
+                    <ul class="caption-slides">
+                      <li class="caption">
+                        <h1 id="hero-title">제 60회</h1>
+                        <div id="remain-time" aria-live="polite" role="timer" aria-label="시험까지 남은 시간"></div>
+                        <h2>"역사를 잊은 민족에게 미래는 없다."</h2>
+                      </li>
+                      <li class="caption">
+                        <h1>한국사 흐름 바로 알기</h1>
+                        <h2>"역사란 '아'와 '비아'의 투쟁이다."</h2>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="hero-btn">
+                  <a href="src/history/index.html" class="btn btn-clean" aria-label="역사 흐름 바로알기 페이지로 이동">바로가기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" aria-labelledby="contact-title">
+      <div class="pad-sec">
+        <div class="container">
+          <div class="title-section text-center animated out" data-animation="fadeInUp" data-delay="0">
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <h2 id="contact-title">문의 및 피드백</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section aria-labelledby="contact-info-title">
+      <div class="contact-info">
+        <div class="container">
+          <h2 id="contact-info-title" class="sr-only">연락처 정보</h2>
+          <div class="row">
+            <div class="col-sm-4">
+              <a href="https://viewfitweb1.netlify.app" aria-label="다른 제작 사이트 방문">
+                <i class="pe-7s-map-marker" aria-hidden="true"></i>다른 제작 사이트 방문
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a href="mailto:k-jun03@naver.com" aria-label="피드백 이메일 보내기">
+                <i class="pe-7s-phone" aria-hidden="true"></i>피드백
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a href="mailto:k-jun03@naver.com" aria-label="광고 및 문의 이메일 보내기">
+                <i class="pe-7s-mail" aria-hidden="true"></i>광고 및 문의
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div id="footer-section" class="text-center">
+      <div class="container">
+        <p class="copyright">
+          &copy; <span id="current-year">2022</span> 한능검 문제정리 - Created By <a href="mailto:k-jun03@naver.com">Mr.kim</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <div class="back-to-top" role="button" tabindex="0" aria-label="페이지 상단으로 이동">
+    <i class="fa fa-angle-up fa-3x" aria-hidden="true"></i>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
+  <script src="assets/js/jquery.appear.min.js"></script>
+  <script src="assets/js/jquery.bxslider.min.js"></script>
+  <script src="assets/js/jquery.owl.carousel.min.js"></script>
+  <script src="assets/js/jquery.countTo.js"></script>
+  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="assets/js/jquery.imagesloaded.min.js"></script>
+  <script src="assets/js/jquery.isotope.js"></script>
+  <script src="assets/js/jquery.placeholder.js"></script>
+  <script src="assets/js/jquery.smoothscroll.js"></script>
+  <script src="assets/js/jquery.stellar.min.js"></script>
+  <script src="assets/js/jquery.waypoints.js"></script>
+  <script src="assets/js/jquery.fitvids.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+  <script src="assets/js/jquery.countdown.js"></script>
+  <script src="assets/js/jquery.navbar-scroll.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false"></script>
+  <script src="assets/js/jquery.gmaps.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
