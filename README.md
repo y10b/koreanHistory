@@ -166,9 +166,9 @@ class KoreanHistoryApp {
 
 ## 👨‍💻 개발자
 
-**Mr.Kim** - 한국사 교육 콘텐츠 개발자
+**Mr.Kim** - 웹개발 공부 중
 
-- 이메일: k-jun03@naver.com
+- 이메일: victory.jun01@gmail.com
 - 포트폴리오: [viewfitweb1.netlify.app](https://viewfitweb1.netlify.app)
 
 ## 🔄 업데이트 로그
